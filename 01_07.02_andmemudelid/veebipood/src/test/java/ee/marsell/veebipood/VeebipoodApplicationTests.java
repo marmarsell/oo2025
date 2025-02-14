@@ -1,4 +1,4 @@
-package ee.mihkel.veebipood;
+package ee.marsell.veebipood;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
