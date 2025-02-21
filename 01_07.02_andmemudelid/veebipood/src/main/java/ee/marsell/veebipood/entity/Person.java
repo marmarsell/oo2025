@@ -16,17 +16,12 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Product {
+public class Person { // ERROR: syntax error near "user" --> andmebaasis reserveeritud
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id; // int
-    private String name;
-    private double price;
-    private String image;
-    private boolean active;
-
-    // @ManyToMany / @ManyToOne / @OneToMany / @OneToOne
-
-    @ManyToOne
-    private Category category;
+    private Long id;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String password;
 }
