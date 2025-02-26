@@ -27,6 +27,9 @@ public class ResultController {
         if(result.getRun100m() < 0) {
             throw new RuntimeException("ERROR_POINTS_CANNOT_BE_THAT_BAD");
         }
+        if(result.getRun100m() == 0) {
+            result.setRun100m(-1);
+        }
         else {
             //set numbers used for calculating points in every field. Made so for comfort purposes.
             double A = 25.4347;
@@ -39,6 +42,9 @@ public class ResultController {
 
         if(result.getRun110mHurdles() < 0) {
             throw new RuntimeException("ERROR_POINTS_CANNOT_BE_THAT_BAD");
+        }
+        if(result.getRun110mHurdles() == 0) {
+            result.setRun110mHurdles(-1);
         }
         else {
             //set numbers used for calculating points in every field. Made so for comfort purposes.
@@ -53,6 +59,9 @@ public class ResultController {
         if(result.getRun400m() < 0) {
             throw new RuntimeException("ERROR_POINTS_CANNOT_BE_THAT_BAD");
         }
+        if(result.getRun400m() == 0) {
+            result.setRun400m(-1);
+        }
         else {
             //set numbers used for calculating points in every field. Made so for comfort purposes.
             double A = 1.53775;
@@ -65,6 +74,9 @@ public class ResultController {
 
         if(result.getRun1500m() < 0) {
             throw new RuntimeException("ERROR_POINTS_CANNOT_BE_THAT_BAD");
+        }
+        if(result.getRun1500m() == 0) {
+            result.setRun1500m(-1);
         }
         else {
             //set numbers used for calculating points in every field. Made so for comfort purposes.
@@ -79,6 +91,9 @@ public class ResultController {
         if(result.getDiscusThrow() < 0) {
             throw new RuntimeException("ERROR_POINTS_CANNOT_BE_THAT_BAD");
         }
+        if(result.getDiscusThrow() == 0) {
+            result.setDiscusThrow(-1);
+        }
         else {
             //set numbers used for calculating points in every field. Made so for comfort purposes.
             double A = 12.91;
@@ -91,6 +106,9 @@ public class ResultController {
 
         if(result.getHighJump() < 0) {
             throw new RuntimeException("ERROR_POINTS_CANNOT_BE_THAT_BAD");
+        }
+        if(result.getHighJump() == 0) {
+            result.setHighJump(-1);
         }
         else {
             //set numbers used for calculating points in every field. Made so for comfort purposes.
@@ -105,6 +123,9 @@ public class ResultController {
         if(result.getJavelinThrow() < 0) {
             throw new RuntimeException("ERROR_POINTS_CANNOT_BE_THAT_BAD");
         }
+        if(result.getJavelinThrow() == 0) {
+            result.setJavelinThrow(-1);
+        }
         else {
             //set numbers used for calculating points in every field. Made so for comfort purposes.
             double A = 10.14;
@@ -117,6 +138,9 @@ public class ResultController {
 
         if(result.getLongJump() < 0) {
             throw new RuntimeException("ERROR_POINTS_CANNOT_BE_THAT_BAD");
+        }
+        if(result.getLongJump() == 0) {
+            result.setLongJump(-1);
         }
         else {
             //set numbers used for calculating points in every field. Made so for comfort purposes.
@@ -131,6 +155,9 @@ public class ResultController {
         if(result.getPoleVault() < 0) {
             throw new RuntimeException("ERROR_POINTS_CANNOT_BE_THAT_BAD");
         }
+        if(result.getPoleVault() == 0) {
+            result.setPoleVault(-1);
+        }
         else {
             //set numbers used for calculating points in every field. Made so for comfort purposes.
             double A = 0.2797;
@@ -143,6 +170,9 @@ public class ResultController {
 
         if(result.getShotPut() < 0) {
             throw new RuntimeException("ERROR_POINTS_CANNOT_BE_THAT_BAD");
+        }
+        if(result.getShotPut() == 0) {
+            result.setShotPut(-1);
         }
         else {
             //set numbers used for calculating points in every field. Made so for comfort purposes.

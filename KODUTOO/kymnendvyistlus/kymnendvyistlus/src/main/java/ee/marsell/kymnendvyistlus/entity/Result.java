@@ -1,9 +1,6 @@
 package ee.marsell.kymnendvyistlus.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,6 +19,9 @@ public class Result {
     //values that are not given
     private Long id;
     private double totalPoints;
+
+    @ManyToOne
+    private Sportsman sportsman;
 
     //values that are given
     //running, measured in SECONDS
@@ -44,21 +44,19 @@ public class Result {
 /*
 
 {
-    "run100m": 20,
-    "run110mHurdles": 20,
-    "run400m": 20,
-    "run1500m": 20,
-
-    "discusThrow": 20,
-    "javelinThrow": 20,
-    "shotPut": 20,
-
-    "highJump": 20,
-    "longJump": 20,
-    "poleVault": 20,
-
-    "category": {
-    "id": 4
+    "totalPoints": 0,
+    "run100m": 10.827,
+    "run110mHurdles": 14.59,
+    "run400m": 48.19,
+    "run1500m": 247.42,
+    "discusThrow": 51.4,
+    "javelinThrow": 70.67,
+    "shotPut": 16.79,
+    "highJump": 210,
+    "longJump": 736,
+    "poleVault": 496,
+    "sportsman": {
+        "id": 1
     }
 }
 
