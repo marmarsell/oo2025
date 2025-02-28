@@ -22,7 +22,7 @@ public class Sportsman {
     private String name;
     private String country;
     private int age;
-    
+
 }
 
 /*
@@ -30,7 +30,7 @@ public class Sportsman {
 {
     "name": "Mars",
     "country": "Estonia",
-    "age": 20,
+    "age": 20
 }
 
 */
