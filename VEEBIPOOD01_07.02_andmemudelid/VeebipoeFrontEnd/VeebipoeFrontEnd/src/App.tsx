@@ -1,17 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
+//import reactLogo from './assets/react.svg'
+//import viteLogo from '/vite.svg'
 import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import MainPage from './pages/MainPage';
+import ManageProducts from './pages/ManageProducts';
+import ManageCategories from './pages/ManageCategories';
+import Array from './pages/Array';
+import Menu from './components/Menu';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import Cart from './pages/Cart';
+import Orders from './pages/Orders';
 
 function App() {
-  const [count, setCount] = useState(0)
-  const sonad = ["Elas", "Metsas", "Mutionu"];
-  const autod = [
-    {"mark": "BMW", "mudel": "i5", "year": 2015},
-    {"mark": "Volkswagen", "mudel": "golf", "year": 2017},
-    {"mark": "Audi", "mudel": "TT", "year": 2015},
-    {"mark": "Mercedes", "mudel": "S", "year": 2012}
-  ];
+  //const [count, setCount] = useState(0)
+  
+
+  
 
   return (
     <>
@@ -19,8 +25,22 @@ function App() {
       <div>7 + 7</div>
       <div>{kogus}</div>
       <div>{count}</div> */}
-      {/* {sonad.map(sona => <div key = {sona}>{"> " + sona}</div> )} */}
-      {autod.map(auto => <div key = {auto.mark+auto.mudel}>{"> " + auto.mark}</div> )}
+        <Menu />
+        
+
+
+        {/*localhost:5173  --->  <div>MainPage</div>*/}
+        <Routes>
+          <Route path="/" element={ <MainPage />} />
+          <Route path="/arrays" element={ <Array />} />
+          <Route path="/manage/products" element={ <ManageProducts />} />
+          <Route path="/manage/categories" element={ <ManageCategories />} />
+          <Route path="/login" element={ <Login />} />
+          <Route path="/signup" element={ <Signup />} />
+          <Route path="/cart" element={ <Cart />} />
+          <Route path="/orders" element={ <Orders/>} />
+          <Route path="/*" element={ <div id='error'><h1>Error 404</h1><h3>Page not found :(</h3></div>} />
+        </Routes>
     </>
   )
 }
