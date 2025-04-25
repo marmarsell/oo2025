@@ -13,3 +13,9 @@
   padding-bottom: 5px;
   background-color: rgb(255, 150, 150);
 }
+
+table {
+  border: 2px dotted black;
+  background-color: rgb(255, 196, 154);
+  margin: auto;
+}
