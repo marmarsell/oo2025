@@ -12,6 +12,8 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Cart from './pages/Cart';
 import Orders from './pages/Orders';
+import SingleProduct from './pages/SingleProduct';
+import EditProduct from './pages/EditProduct';
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -39,6 +41,10 @@ function App() {
           <Route path="/signup" element={ <Signup />} />
           <Route path="/cart" element={ <Cart />} />
           <Route path="/orders" element={ <Orders/>} />
+
+          <Route path="/product/:productId" element={ <SingleProduct/>} />
+          <Route path="/manage/edit-product/:productId" element={ <EditProduct/>} />
+
           <Route path="/*" element={ <div id='error'><h1>Error 404</h1><h3>Page not found :(</h3></div>} />
         </Routes>
     </>
