@@ -1,12 +1,11 @@
 
 
 function MainPage() {
-    const number = 3;
 
     return(
         <div>
-            <div>{number}</div>
-            <div>wiwiwawawuwu</div>
+            <br />
+            <div>/ decathlon purgatory abyss /</div>
         </div>
         
     )

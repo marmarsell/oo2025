@@ -1,6 +1,8 @@
 //import React from 'react'
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Result } from "../models/Result"
+import "../rules/list.css"
+import { Link } from 'react-router-dom';
 
 function ResultReadout() {
   
@@ -14,10 +16,20 @@ function ResultReadout() {
     
   return (
     <div>
+      <div>/ Result readout /</div>
       <div>
         {hoomans.map(Result => 
-          <div key={Result.id}>
-            {"id:"} {Result.id} {Result.totalPoints} {Result.sportsman.name}
+          <div key={Result.id} id='alignLeft'>
+            <hr />
+            <div>{"> result identifier:"} {Result.id}</div>
+            <div>{"> total points:"} {Result.totalPoints}</div>
+            <div>{"> person name:"} {Result.sportsman.name}</div>
+            <br />
+            <div>
+              <Link to={"/results/" + Result.id}>
+                <button>Details</button>
+              </Link>
+            </div>
           </div>
         )}
       </div>
