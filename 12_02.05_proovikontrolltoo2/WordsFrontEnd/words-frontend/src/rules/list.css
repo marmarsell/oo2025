@@ -1,0 +1,13 @@
+#mainWidth {
+    width: 65vw;
+}
+
+#alignLeft {
+    text-align: left;
+}
+
+#entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
