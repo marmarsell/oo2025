@@ -19,3 +19,9 @@ table {
   background-color: rgb(255, 196, 154);
   margin: auto;
 }
+
+.map {
+  height: 300px;
+  margin: 2%;
+  border-radius: 15px;
+}

@@ -14,6 +14,7 @@ import Cart from './pages/Cart';
 import Orders from './pages/Orders';
 import SingleProduct from './pages/SingleProduct';
 import EditProduct from './pages/EditProduct';
+import Map from './pages/Map';
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -46,6 +47,8 @@ function App() {
           <Route path="/manage/edit-product/:productId" element={ <EditProduct/>} />
 
           <Route path="/*" element={ <div id='error'><h1>Error 404</h1><h3>Page not found :(</h3></div>} />
+          <Route path="/map" element={ <Map />} />
+
         </Routes>
     </>
   )

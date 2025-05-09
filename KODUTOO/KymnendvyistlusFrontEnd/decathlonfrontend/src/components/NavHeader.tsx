@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useState, useEffect} from 'react';
 import { Person } from '../models/Person';
+import { Link } from 'react-router-dom';
 //import { Link } from 'react-router-dom';
 
 function NavHeader() {
@@ -25,12 +26,12 @@ function NavHeader() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
     <Container>
-      <Navbar.Brand href="/">DecathlOwOn</Navbar.Brand>
+      <Navbar.Brand to="/" as={Link}>DecathlOwOn</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="/results">Results</Nav.Link>
+          <Nav.Link to="/" as={Link}>Home</Nav.Link>
+          <Nav.Link to="/results" as={Link}>Results</Nav.Link>
           
           <NavDropdown title="Attendees" id="basic-nav-dropdown">
             <NavDropdown.Item href="/sportsmen">Σ All</NavDropdown.Item>

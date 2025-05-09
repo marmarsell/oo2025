@@ -3,8 +3,12 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
+import React from 'react';
+import { useTransition } from "react";
 
 function Menu() {
+  const { t, i18n } = useTransition();
+
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
       <Container>
@@ -15,6 +19,7 @@ function Menu() {
             <Nav.Link as={Link} to="/cart">Cart</Nav.Link>
             <Nav.Link as={Link} to="/arrays">Arrays</Nav.Link>
             <Nav.Link as={Link} to="/orders">Orders</Nav.Link>
+            <Nav.Link as={Link} to="/map">Map</Nav.Link>
             <NavDropdown title="Admin" id="collapsible-nav-dropdown">
               <NavDropdown.Item as={Link} to="/manage/products">Manage Products</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/manage/categories">
